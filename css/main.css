@@ -410,6 +410,39 @@ header .iconWidget .btnIcon i {
   padding: 1.8em 0 1.8em 3em;
   color: #181818;
 }
+.wavyContact .contactRight .dropdown-toggle {
+  border-radius: 50px;
+  width: 100%;
+  font-size: 0.8em;
+  opacity: 0.8;
+  padding: 0 0 0 3.5em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 3.2em;
+  height: 3.2em;
+  transition: all 0.5s;
+}
+.wavyContact .contactRight .dropdown-toggle::after {
+  position: absolute;
+  top: 1.6em;
+  right: 1.5em;
+  color: #b61984;
+}
+.wavyContact .contactRight .dropdown-toggle.open::after {
+  transform: scaleY(-1);
+}
+.wavyContact .contactRight .dropdown-menu {
+  width: 100%;
+  list-style: none;
+  max-height: 320px;
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  color: #181818;
+}
+.wavyContact .contactRight .dropdown-menu .itemDropdown {
+  font-size: 0.8em;
+  padding-left: 3.5em;
+}
 .wavyContact .contactRight textarea {
   padding: 1em 1em 1em 3.5em;
   height: 90px;
