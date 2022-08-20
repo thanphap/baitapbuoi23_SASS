@@ -1,0 +1,134 @@
+.wavyContact {
+    position: relative;
+    .container {
+        position: relative;
+        z-index: 5;
+        padding: $pd-6 0 0;
+        width: 1000px;
+        max-width: calc(100% - 60px);
+    }
+    .content {
+        margin: 0 $mg-8;
+    }
+    .contactLeft {
+        padding: 0 $pd-8;
+        margin-top: $mg-4;
+        margin-bottom: $mg-3;
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .contactRight {
+        display: flex;
+        align-items: center;
+        padding: 0 $pd-3;
+        .card {
+            padding: 0 $pd-14;
+            box-shadow: 0 30px 30px -10px $color-dark-3;
+        }
+        .card-body {
+            text-align: left;
+            padding: 0;
+            margin: $mg-9 0;
+        }
+        .card-title {
+            @include styleText($color-dark-2, $fs-9, $fw-4);
+            margin-bottom: $mg-10;
+        }
+        .contactSpace {
+            padding-bottom: $pd-1;
+        }
+        .contactInfor {
+            margin: 0;
+            .col {
+                position: relative;
+                padding-left: 0;
+                padding-right: $pd-1;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        .btContactList, 
+        .btContactMessage{
+            position: relative;
+        }
+        i {
+            color: $color-purple-1;
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            line-height: 1;
+            z-index: 2;
+        }
+        input{
+            border: 1px solid $color-dark-4;
+            height: 3.7em;
+            padding: $pd-1 $pd-1 $pd-1 $pd-4;
+            font-size: $fs-10;
+            transition: all .5s;
+        }
+        select {
+            border-radius: 50px;
+            width: 100%;
+            font-size: $fs-10;
+            opacity: 0.8;
+            padding: 0 0 0 $pd-15;
+            border: 1px solid $color-dark-4;
+            line-height: 3.2em;
+            height: 3.2em;
+            outline: 0;
+            transition: all .5s;
+            option {
+                font-size: 1em;
+                padding: $pd-16 0 $pd-16 $pd-15;
+                color: $color-dark-1;
+            }
+        }
+        textarea {
+            padding: $pd-1 $pd-1 $pd-1 $pd-4;
+            height: 90px;
+            line-height: 1.5;
+            font-size: $fs-10;
+            border-radius: 20px;
+            width: 100%;
+            outline: 0;
+            border: 1px solid $color-dark-4;
+            transition: all .5s;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus{
+            @include styleInputHover($color-dark-4, $color-dark-5);
+        }
+        .btContactButton{
+            padding-top: $pd-2;
+            padding-bottom: $pd-17;
+            max-width: 150px;
+            .btnWavy{
+                @include styleBoxShadow(3em, $color-purple-1);
+                height: 4em;
+            }
+            button:hover{
+                @include styleBoxShadow(1px, $color-purple-1);
+                color: $color-purple-1;
+            }
+        }
+    }
+
+}
+
+@include responsive("extra-large-down"){
+    .wavyContact {
+        .contactRight{
+            display: block;
+            .card-title {
+                font-size: $fs-15;
+            }
+        } 
+    }
+    
+}
+

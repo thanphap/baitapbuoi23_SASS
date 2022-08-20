@@ -1,0 +1,110 @@
+footer{
+    background-image: url("../img/footer_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $color-white-1;
+    .container{
+        overflow: hidden;
+        padding-top: $pd-7;
+        padding-bottom: $pd-7;
+    }
+    .row{
+        margin-left: -$mg-9;
+        margin-right:-$mg-9;
+        .itemFooter{
+            padding: 0 $pd-8;
+        }
+    }
+
+    .titleFooter{
+        margin-bottom: $mg-3;
+        &.endtitle{
+            margin-bottom: $mg-13;
+        } 
+    }
+    .usItem{
+        padding-left: 0;
+        padding-right: $pd-1;
+        margin-bottom: $pd-1;
+        line-height: 1;
+        max-width: 100%;
+        &.usEnd{
+            margin-bottom: $mg-3;
+        }
+        span{
+            font-size: $fs-3;
+            padding-left: $pd-5;
+            line-height: 1.1;
+        }
+    }
+    .usIcon{
+        margin-bottom: $mg-12;
+        .btnIcon{
+            padding-right: $pd-1;
+            &:hover{
+                color: $color-dark-2;
+            }
+        }
+    }
+    .contentMenu{
+        display: flex;
+        margin-bottom: $mg-12;
+    }
+    .menu{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+        border-bottom: 1px solid $color-dark-4;
+        line-height: 1;
+        padding: $pd-5 0;
+        margin-left: 0;
+        &:first-child{
+            padding-top: 0;
+        }
+        a{
+            font-size: $fs-3;
+            &:hover{
+                opacity: .8;
+            }
+        }
+    }
+    .contentNewsletter{
+        margin-bottom: $mg-12;
+    }
+    .spaceNewsletter{
+        padding-bottom: $pd-12;
+    }
+    .emailNewsletter{
+        border: 1px solid $color-white-2;
+        text-align: center;
+        height: 3.2em;
+        &::placeholder {
+            color: $color-white-1;
+        }
+        &:focus{
+            @include styleInputHover($color-dark-4, $color-white-1);
+        }
+    }
+    .sendNewsletter{
+        @include styleBoxShadow(3em, $color-white-1);
+        color: $color-dark-1;
+        height: 4em;
+        max-width: 100%;
+        &:hover{
+            @include styleBoxShadow(1px, $color-white-1);
+            color: $color-white-1;
+        }
+    }
+}
+
+// @include responsive("extra-large-down"){
+//     footer{
+//         .row{
+//             margin: 0 -15px;
+//         }
+//     } 
+    
+// }

@@ -1,0 +1,120 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    .navbar {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        padding: 0;
+    }
+    .navbar-brand {
+        padding: 0;
+        img {
+            @include styleLogo(80px);
+        }
+    }
+    .navbar-toggler{
+        width: auto;
+        i{
+            color: $color-dark-1;
+            font-size: 1.5em;
+            font-weight: $fw-3;
+            transition: all .2s;
+            &:hover{
+                color: $color-purple-1;
+                transform: scaleY(1.5);
+            }
+        }
+    } 
+    .navbar-nav {
+        align-items: center;
+        font-size: $fs-2;
+        .nav-item {
+            padding-right: $pd-13;
+            .nav-link {
+                padding: 0;
+                @include styleText($color-dark-2, $fs-2, $fw-3);
+                display: block;
+                position: relative;
+                line-height: 80px;
+                transition: all .1s;
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -4px;
+                    margin-left: -4px;
+                    height: 8px;
+                    width: 8px;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    background-color: $color-purple-1;
+                    transform: scale(0);
+                    transition: all .5s;
+                }
+                &:hover {
+                    color: $color-purple-1;
+                    &::after {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+        .active {
+            .nav-link {
+                &::after {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .buttonPhone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $pd-10 $pd-11;
+        margin: $mg-14;
+        @include styleText($color-white-1, $fs-4, $fw-2);
+        border: none;
+        border-radius: $bd-2;
+        line-height: 1;
+        @include styleBoxShadow(3em, $color-purple-1);
+        transition: all .3s;
+        &:hover{
+            color: $color-purple-1;
+            @include styleBoxShadow(1px, $color-purple-1);
+        }
+        i {
+            padding-right: $pd-12;
+        }
+    }
+    .iconWidget {
+        display: flex;
+        font-size: $fs-3;
+        line-height: 38px;
+        a{
+            display: inline-block;
+            margin-left: $mg-2;
+            color: $color-dark-2;
+            font-weight: $fw-1;
+            line-height: inherit;
+            &:hover{
+                color: $color-purple-1;
+            }
+        }
+        .btnIcon i {
+            font-size: $fs-12;
+            
+        }
+    }
+    
+}
+
+@include responsive("extra-large"){
+    .navbar-collapse{
+        background-color: $color-white-1;
+    } 
+}

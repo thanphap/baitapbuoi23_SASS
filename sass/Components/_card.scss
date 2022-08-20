@@ -1,0 +1,29 @@
+.card{
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    transition: all .3s;
+    img{
+        transition: transform 650ms ease-in-out,filter 650ms ease-in-out;
+        &:hover{
+            transform: scale3d(1.05,1.05,1.05);
+        }
+    }
+    .spaceCard{
+        margin-bottom: $mg-2;
+    }
+    .card-body{
+        padding: 35px $pd-2 35px;
+        text-align: center;
+        span{
+            display: block;
+            &:first-child{
+                @include styleText($color-purple-1,$fs-7,$fw-3);
+                margin-bottom: $mg-6;
+            }
+        }
+        p{
+            margin-top: $mg-2;
+        }
+    }
+}

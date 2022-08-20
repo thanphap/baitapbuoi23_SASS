@@ -1,0 +1,552 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #181818;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+.container {
+  max-width: 1260px;
+  width: 100%;
+  padding: 0 30px;
+}
+
+h4, h5 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  outline: 0;
+  transition: all 0.2s;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1199.98px) {
+  body {
+    font-size: 14px;
+  }
+}
+button {
+  border-radius: 50px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  width: 100%;
+  outline: 0;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.3s;
+}
+.card img {
+  transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+}
+.card img:hover {
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+.card .spaceCard {
+  margin-bottom: 1em;
+}
+.card .card-body {
+  padding: 35px 2em 35px;
+  text-align: center;
+}
+.card .card-body span {
+  display: block;
+}
+.card .card-body span:first-child {
+  color: #b61984;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+.card .card-body p {
+  margin-top: 1em;
+}
+
+input:not([type=submit]) {
+  border-radius: 50px;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  line-height: 1;
+  display: block;
+  color: inherit;
+  font: inherit;
+  padding: 1em;
+  transition: all 0.5s;
+}
+
+.botBackgroud {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+header .navbar {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  padding: 0;
+}
+header .navbar-brand {
+  padding: 0;
+}
+header .navbar-brand img {
+  width: 80px;
+  height: auto;
+}
+header .navbar-toggler {
+  width: auto;
+}
+header .navbar-toggler i {
+  color: #181818;
+  font-size: 1.5em;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+header .navbar-toggler i:hover {
+  color: #b61984;
+  transform: scaleY(1.5);
+}
+header .navbar-nav {
+  align-items: center;
+  font-size: 13px;
+}
+header .navbar-nav .nav-item {
+  padding-right: 50px;
+}
+header .navbar-nav .nav-item .nav-link {
+  padding: 0;
+  color: #191919;
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+  position: relative;
+  line-height: 80px;
+  transition: all 0.1s;
+}
+header .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  margin-left: -4px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: #b61984;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+header .navbar-nav .nav-item .nav-link:hover {
+  color: #b61984;
+}
+header .navbar-nav .nav-item .nav-link:hover::after {
+  transform: scale(1.5);
+}
+header .navbar-nav .active .nav-link::after {
+  transform: scale(1.1);
+}
+header .buttonPhone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1em 1.5em;
+  margin: 6px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  line-height: 1;
+  box-shadow: 0 0 0 3em #b61984 inset;
+  transition: all 0.3s;
+}
+header .buttonPhone:hover {
+  color: #b61984;
+  box-shadow: 0 0 0 1px #b61984 inset;
+}
+header .buttonPhone i {
+  padding-right: 0.5em;
+}
+header .iconWidget {
+  display: flex;
+  font-size: 0.9em;
+  line-height: 38px;
+}
+header .iconWidget a {
+  display: inline-block;
+  margin-left: 1em;
+  color: #191919;
+  font-weight: 400;
+  line-height: inherit;
+}
+header .iconWidget a:hover {
+  color: #b61984;
+}
+header .iconWidget .btnIcon i {
+  font-size: 1.25em;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+  }
+}
+.wavyCarousel {
+  position: relative;
+}
+.wavyCarousel .container {
+  position: relative;
+  z-index: 2;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.wavyCarousel .wavyLeft {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  height: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.wavyCarousel .wavyRight img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.wavyCarousel .wavyText {
+  margin: 4em 0;
+}
+.wavyCarousel .wavyText p {
+  color: #b61984;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+.wavyCarousel .wavyText h1 {
+  color: #191919;
+  font-size: 3.8rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+.wavyCarousel .topbgCarousel {
+  position: absolute;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+}
+.wavyCarousel .botbgCarousel {
+  position: absolute;
+  max-width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .wavyCarousel .wavyText p {
+    font-size: 1rem;
+  }
+  .wavyCarousel .wavyText h1 {
+    font-size: 3.15rem;
+  }
+}
+.wavyMember {
+  position: relative;
+  background-color: #dcd1f3;
+}
+.wavyMember .container {
+  position: relative;
+  z-index: 3;
+  padding-top: 2em;
+}
+.wavyMember .row {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.wavyMember .row .itemMember {
+  padding: 0 20px;
+}
+.wavyMember .row .itemMember:hover .card {
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+.wavyMember .spaceMember {
+  padding: 20px 0;
+}
+
+.wavyContact {
+  position: relative;
+}
+.wavyContact .container {
+  position: relative;
+  z-index: 5;
+  padding: 4em 0 0;
+  width: 1000px;
+  max-width: calc(100% - 60px);
+}
+.wavyContact .content {
+  margin: 0 -20px;
+}
+.wavyContact .contactLeft {
+  padding: 0 40px;
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+.wavyContact .contactLeft img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.wavyContact .contactRight {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.wavyContact .contactRight .card {
+  padding: 0 25px;
+  box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+}
+.wavyContact .contactRight .card-body {
+  text-align: left;
+  padding: 0;
+  margin: 40px 0;
+}
+.wavyContact .contactRight .card-title {
+  color: #191919;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.wavyContact .contactRight .contactSpace {
+  padding-bottom: 1em;
+}
+.wavyContact .contactRight .contactInfor {
+  margin: 0;
+}
+.wavyContact .contactRight .contactInfor .col {
+  position: relative;
+  padding-left: 0;
+  padding-right: 1em;
+}
+.wavyContact .contactRight .contactInfor .col:last-child {
+  padding-right: 0;
+}
+.wavyContact .contactRight .btContactList,
+.wavyContact .contactRight .btContactMessage {
+  position: relative;
+}
+.wavyContact .contactRight i {
+  color: #b61984;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  line-height: 1;
+  z-index: 2;
+}
+.wavyContact .contactRight input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 3.7em;
+  padding: 1em 1em 1em 3.5em;
+  font-size: 0.8em;
+  transition: all 0.5s;
+}
+.wavyContact .contactRight select {
+  border-radius: 50px;
+  width: 100%;
+  font-size: 0.8em;
+  opacity: 0.8;
+  padding: 0 0 0 3em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 3.2em;
+  height: 3.2em;
+  outline: 0;
+  transition: all 0.5s;
+}
+.wavyContact .contactRight select option {
+  font-size: 1em;
+  padding: 1.8em 0 1.8em 3em;
+  color: #181818;
+}
+.wavyContact .contactRight textarea {
+  padding: 1em 1em 1em 3.5em;
+  height: 90px;
+  line-height: 1.5;
+  font-size: 0.8em;
+  border-radius: 20px;
+  width: 100%;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+.wavyContact .contactRight input:focus,
+.wavyContact .contactRight select:focus,
+.wavyContact .contactRight textarea:focus {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.wavyContact .contactRight .btContactButton {
+  padding-top: 2em;
+  padding-bottom: 24px;
+  max-width: 150px;
+}
+.wavyContact .contactRight .btContactButton .btnWavy {
+  box-shadow: 0 0 0 3em #b61984 inset;
+  height: 4em;
+}
+.wavyContact .contactRight .btContactButton button:hover {
+  box-shadow: 0 0 0 1px #b61984 inset;
+  color: #b61984;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .wavyContact .contactRight {
+    display: block;
+  }
+  .wavyContact .contactRight .card-title {
+    font-size: 2rem;
+  }
+}
+footer {
+  background-image: url("../img/footer_background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+footer .container {
+  overflow: hidden;
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+footer .row {
+  margin-left: -40px;
+  margin-right: -40px;
+}
+footer .row .itemFooter {
+  padding: 0 40px;
+}
+footer .titleFooter {
+  margin-bottom: 2em;
+}
+footer .titleFooter.endtitle {
+  margin-bottom: 45px;
+}
+footer .usItem {
+  padding-left: 0;
+  padding-right: 1em;
+  margin-bottom: 1em;
+  line-height: 1;
+  max-width: 100%;
+}
+footer .usItem.usEnd {
+  margin-bottom: 2em;
+}
+footer .usItem span {
+  font-size: 0.9em;
+  padding-left: 0.8em;
+  line-height: 1.1;
+}
+footer .usIcon {
+  margin-bottom: 80px;
+}
+footer .usIcon .btnIcon {
+  padding-right: 1em;
+}
+footer .usIcon .btnIcon:hover {
+  color: #191919;
+}
+footer .contentMenu {
+  display: flex;
+  margin-bottom: 80px;
+}
+footer .menu {
+  margin: 0;
+  padding: 0;
+}
+footer li {
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  padding: 0.8em 0;
+  margin-left: 0;
+}
+footer li:first-child {
+  padding-top: 0;
+}
+footer li a {
+  font-size: 0.9em;
+}
+footer li a:hover {
+  opacity: 0.8;
+}
+footer .contentNewsletter {
+  margin-bottom: 80px;
+}
+footer .spaceNewsletter {
+  padding-bottom: 0.5em;
+}
+footer .emailNewsletter {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  height: 3.2em;
+}
+footer .emailNewsletter::placeholder {
+  color: #ffffff;
+}
+footer .emailNewsletter:focus {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffffff;
+}
+footer .sendNewsletter {
+  box-shadow: 0 0 0 3em #ffffff inset;
+  color: #181818;
+  height: 4em;
+  max-width: 100%;
+}
+footer .sendNewsletter:hover {
+  box-shadow: 0 0 0 1px #ffffff inset;
+  color: #ffffff;
+}/*# sourceMappingURL=main.css.map */

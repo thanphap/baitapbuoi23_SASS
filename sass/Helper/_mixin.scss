@@ -1,0 +1,31 @@
+@mixin styleLogo ($width){
+    width: $width;
+    height: auto;
+}
+
+@mixin styleText ($color, $fs, $fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleInputHover($color-box, $color-bor){
+    box-shadow: 0 0 4px 0 $color-box;
+    border: 1px solid $color-bor;
+}
+
+@mixin styleBoxShadow($width, $color) {
+    box-shadow: 0 0 0 $width $color inset;
+}
+
+@mixin responsive($screen) {
+    @if(map-has-key($map:$breakpoints, $key:$screen)){
+        $value: map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "`{$screen} isn't in breakpoint";
+    }
+}

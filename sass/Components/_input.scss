@@ -1,0 +1,12 @@
+input:not([type='submit']){
+    border-radius: 50px;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    line-height: 1;
+    display: block;
+    color: inherit;
+    font: inherit;
+    padding: 1em;
+    transition: all .5s;
+}

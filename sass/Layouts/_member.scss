@@ -1,0 +1,22 @@
+.wavyMember{
+    position: relative;
+    background-color: $color-blue-2;
+    .container{
+        position:relative;
+        z-index: 3;
+        padding-top: $pd-2;
+    }
+    .row{
+        margin-left: $mg-8;
+        margin-right:$mg-8;
+        .itemMember{
+            padding: 0 $pd-3;
+            &:hover .card{
+                box-shadow: 0 30px 30px -10px $color-dark-3;
+            }
+        }
+    }
+    .spaceMember{
+        padding: $pd-3 0;
+    }
+}
